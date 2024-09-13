@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP Expression Tag Example</title>
+</head>
+<body>
+    <h1>JSP Expression Tag Example</h1>
+    
+    <%-- Declaring a Java variable --%>
+    <%
+        String name = "John Doe";
+        int age = 25;
+        int number1 = 10;
+        int number2 = 20;
+    %>
+    
+    <p>Hello, my name is <%= name %> and I am <%= age %> years old.</p>
+    
+    <%-- Arithmetic operation --%>
+    <p>The sum of <%= number1 %> and <%= number2 %> is <%= number1 + number2 %>.</p>
+    
+    <%-- Current Date and Time --%>
+    <p>The current date and time is: <%= new java.util.Date() %>.</p>
+</body>
+</html>

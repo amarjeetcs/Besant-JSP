@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Multiplecation of two number is: <% out.print(2*5);%></h1> <!--  scriptlet tage -->
+<% out.print("Hi Amarjeet, Welcome to JSP Page");%>
+<% System.out.println(2*50);%>
+
+
+
+<h1>Multiplication of two numbers is: 
+    <% 
+        out.print(2 * 50); 
+        out.print("<br>Hi Amarjeet, Welcome to JSP Page<br>"); 
+        System.out.println(2 * 5); 
+    %>
+</h1>
+
+
+
+</body>
+</html>
