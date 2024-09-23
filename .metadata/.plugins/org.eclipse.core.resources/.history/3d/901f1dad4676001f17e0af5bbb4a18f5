@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	  
+    <%
+        try {
+            // Deliberately causing a division by zero exception
+            int num = 10;
+            int result = num / 0;  // This will throw an ArithmeticException
+            out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            // Handling the exception and displaying a custom message
+            out.println("<h3>An error occurred: Division by zero is not allowed.</h3>");
+            out.println("<strong>Error Message:</strong> " + e.getMessage() + "<br>");
+            e.printStackTrace(new java.io.PrintWriter(out));
+        }
+    %>
+	
+	
+	
+	
+
+</body>
+</html>

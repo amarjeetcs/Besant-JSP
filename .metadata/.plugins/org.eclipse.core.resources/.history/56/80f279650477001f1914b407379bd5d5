@@ -1,0 +1,11 @@
+<%@ include file="header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h2>Home Page Content</h2>
+    <p>This is the home page of the website.</p>
+</body>
+</html>

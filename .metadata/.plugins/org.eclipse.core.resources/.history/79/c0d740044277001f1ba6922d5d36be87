@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	id="WebApp_ID" version="5.0">
+
+<display-name>HelloWorldUsingJsp</display-name>
+
+<welcome-file-list>
+<welcome-file>index.html</welcome-file>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+
+<!-- Define servlet that maps to the config.jsp -->
+<servlet>
+<servlet-name>myJspPage</servlet-name>
+<jsp-file>/config.jsp</jsp-file>
+<init-param>
+<param-name>email</param-name>
+<param-value>amarjeetcs79@gmail.com</param-value>
+</init-param>
+</servlet>
+
+<!-- Map servlet to /config URL pattern -->
+<servlet-mapping>
+<servlet-name>myJspPage</servlet-name>
+<url-pattern>/config</url-pattern>
+</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+</head>
+<body>
+	 <jsp:include page="header.jsp" />
+	<h2>Home Page Content</h2>
+	<p>This is the home page of the website.</p>
+	<jsp:forward page="resultPage.jsp" />
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.time.LocalDateTime" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Object Example with LocalDateTime</title>
+</head>
+<body>
+    <h2>Demonstrating the use of 'page' Object in JSP with LocalDateTime</h2>
+    
+    <%
+        // Use the page object to call the method that prints current date and time
+        page.printCurrentDateTime(out);
+    %>
+    
+    <%! 
+        // Declare a method to print the current date and time using LocalDateTime
+        public void printCurrentDateTime(JspWriter out) {
+            try {
+                // Using LocalDateTime to get the current date and time
+                out.println("The current date and time is: " + LocalDateTime.now() + "<br>");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    %>
+</body>
+</html>

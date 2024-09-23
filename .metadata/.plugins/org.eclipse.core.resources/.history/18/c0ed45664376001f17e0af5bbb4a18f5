@@ -1,0 +1,30 @@
+<%@ page import="java.util.Date"%>
+<html>
+<head>
+<title>Page Directive Example</title>
+</head>
+<body>
+	<h2>Page Directive Example</h2>
+
+	<p>
+		Current Date and Time:
+		<%=new Date()%></p>
+	<%
+	out.println("The current JSP servlet instance: " + page);
+	%>
+	<%
+	// Log a message to the server log file using pageContext
+	pageContext.getServletContext().log("This is a log message from JSP.");
+	%>
+	<%
+	// Log a message to the server log using ServletContext
+	String logMessage = "Log entry from JSP at: " + new Date();
+	pageContext.getServletContext().log(logMessage);
+
+	// Output to the page to show that the log was made
+	out.println("Log entry made: " + logMessage);
+	%>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<%@ include file="header.jsp" %>
+    <h2>Home Page Content</h2>
+    <p>This is the home page of the website.</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+	// Deliberately causing a division by zero exception
+	int num = 10;
+	int result = num / 0; // This will throw an ArithmeticException
+	out.println("Result: " + result);
+	%>
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+	// Printing the page object (equivalent to 'this')
+	out.print("This is the current JSP page instance: " + page.toString());
+	%>
+</body>
+</html>

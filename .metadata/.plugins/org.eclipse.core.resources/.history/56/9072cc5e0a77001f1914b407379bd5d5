@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP UseBean Example</title>
+</head>
+<body>
+    <h1>Using <jsp:useBean> to Create a User Bean</h1>
+
+    <!-- Create or reference a User bean -->
+    <jsp:useBean id="user" class="com.example.User" scope="session">
+        <!-- Initialize the bean properties -->
+        <jsp:setProperty name="user" property="name" value="John Doe" />
+        <jsp:setProperty name="user" property="email" value="john@example.com" />
+        <jsp:setProperty name="user" property="age" value="30" />
+    </jsp:useBean>
+
+    <!-- Display the bean properties -->
+    <p><strong>User Name:</strong> <jsp:getProperty name="user" property="name" /></p>
+    <p><strong>User Email:</strong> <jsp:getProperty name="user" property="email" /></p>
+    <p><strong>User Age:</strong> <jsp:getProperty name="user" property="age" /></p>
+
+    <!-- Modify the bean property using form -->
+    <form method="POST" action="user.jsp">
+        <label for="name">Change Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Handle form data and update the bean -->
+    <jsp:setProperty name="user" property="name" param="name" />
+</body>
+</html>
+    

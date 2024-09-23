@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Object Example</title>
+</head>
+<body>
+    <h2>Demonstrating the use of 'page' Object in JSP</h2>
+    
+    <%
+        // page refers to 'this' JSP instance, using it to call a method
+        page.printCurrentDate(out);
+    %>
+    
+    <%
+        // Define a method that can be called using 'page'
+        // This is a JSP declaration, where methods or variables can be declared
+        public void printCurrentDate(JspWriter out) {
+            try {
+                out.println("The current date and time is: " + new Date() + "<br>");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    %>
+</body>
+</html>

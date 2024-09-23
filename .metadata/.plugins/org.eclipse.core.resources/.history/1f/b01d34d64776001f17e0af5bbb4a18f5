@@ -1,0 +1,15 @@
+<%@ page isErrorPage="true" %>
+<html>
+<head>
+    <title>Error Page</title>
+</head>
+<body>
+    <h2>Error Details</h2>
+    <%
+        // Displaying exception details
+        if (exception != null) {
+            out.print("Error: " + exception.getMessage() + "<br/>");
+        }
+    %>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:useBean id="user" class="com.example.User" scope="session" />
+<html>
+<head>
+    <title>Use Bean Example</title>
+</head>
+<body>
+    <%
+        com.example.User user = (com.example.User) pageContext.getAttribute("user");
+        user.setName("John Doe");
+    %>
+    <p>User Name: <jsp:getProperty name="user" property="name" /></p>
+</body>
+</html>
+    

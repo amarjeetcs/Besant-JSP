@@ -1,0 +1,46 @@
+package com.innoventes.test.app.dto;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+public class CompanyDTO {
+
+	private Long id;
+
+	@Size(min = 5, max = 10, message = "character should be less than 5 char")
+	@NotBlank(message = "it should not be blank")
+	@NotNull(message = "it should not be null")
+	@NotEmpty(message = "it should not be empty")
+	private String companyName;
+
+	@Email(message = "enter the valid email id")
+	@NotNull(message = "email cant not be null")
+	private String email;
+
+	/*
+	 * If value is provided, the format of the String should be as below: ○ Length
+	 * should be 5 characters ○ 1st & 2nd characters should be alphabets (case
+	 * insensitive) ○ 3rd & 4th characters should be numbers ○ 5th character should
+	 * be E or N (case insensitive)
+	 */
+	private Integer strength;
+
+	private String webSiteURL;
+	
+	@Size(min = 5, message = "length should be 5 char only")
+	
+	private int companyCode;
+}

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isErrorPage="true" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+</head>
+<body>
+    <h2>An error occurred</h2>
+
+    <p><strong>Exception Type:</strong> <%= exception.getClass().getName() %></p>
+    <p><strong>Error Message:</strong> <%= exception.getMessage() %></p>
+    <p><strong>Stack Trace:</strong></p>
+    <pre>
+        <%
+            // Printing the stack trace using the implicit 'exception' object
+            exception.printStackTrace(new java.io.PrintWriter(out));
+        %>
+    </pre>
+</body>
+</html>

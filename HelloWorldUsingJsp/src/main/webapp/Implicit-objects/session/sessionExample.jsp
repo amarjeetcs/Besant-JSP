@@ -6,10 +6,10 @@
 <body>
     <%
         // Storing a value in the session
-        session.setAttribute("userName", "Amarjeet Kumar Singh");
+        session.setAttribute("Prabha", "Amarjeet Kumar Singh");
 
         // Retrieving the session attribute
-        String user = (String) session.getAttribute("userName");
+        String user = (String) session.getAttribute("Prabha");
         out.print("Session User: " + user + "<br/>");
 
         // Invalidating the session (optional)
